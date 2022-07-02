@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="prev_page">السابق</string>
-    <string name="pg_number">/ 1</string>
-    <string name="next_page">التالي</string>
-    <string name="save">حفظ</string>
-    <string name="msg">استغرق تحميل الصورة وقتا أطول من المعتاد</string>
-</resources>
