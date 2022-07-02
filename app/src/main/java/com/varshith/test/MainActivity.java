@@ -1,4 +1,4 @@
-package com.op.test;
+package com.varshith.test;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +17,8 @@ import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.SearchView;
 import android.widget.TextView;
+
+import com.varshith.test.R;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

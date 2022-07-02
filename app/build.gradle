@@ -6,7 +6,7 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.op.test"
+        applicationId "com.varshith.test"
         minSdk 24
         targetSdk 31
         versionCode 1
