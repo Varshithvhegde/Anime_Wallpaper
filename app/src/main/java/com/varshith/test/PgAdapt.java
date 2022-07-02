@@ -33,6 +33,7 @@ import com.bumptech.glide.load.DataSource;
 import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
+import com.tree.rh.ctlib.CT;
 import com.varshith.test.R;
 
 import java.io.File;
@@ -81,7 +82,8 @@ public class PgAdapt extends PagerAdapter {
         Glide.with(mContext).load(link).placeholder(R.drawable.load).listener(new RequestListener<Drawable>() {
             @Override
             public boolean onLoadFailed(@Nullable GlideException e, Object model, Target<Drawable> target, boolean isFirstResource) {
-                Toast.makeText(mContext, R.string.msg, Toast.LENGTH_LONG).show();
+                CT.loading(mContext,"Image loading took longer than usual");
+                //Toast.makeText(mContext, R.string.msg, Toast.LENGTH_LONG).show();
 
                 return false;
             }
@@ -133,9 +135,11 @@ public class PgAdapt extends PagerAdapter {
                     .setDestinationInExternalPublicDir(Environment.DIRECTORY_PICTURES, File.separator + filename + ".jpg");
 
             dm.enqueue(request);
-            Toast.makeText(mContext, "Image download started.", Toast.LENGTH_SHORT).show();
+            CT.loading2(mContext, "Image download started.");
+            //Toast.makeText(mContext, "Image download started.", Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
-            Toast.makeText(mContext, "Image download failed.", Toast.LENGTH_SHORT).show();
+            CT.failed(mContext, "Image download failed.");
+          //  Toast.makeText(mContext, "Image download failed.", Toast.LENGTH_SHORT).show();
         }
     }
 
